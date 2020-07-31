@@ -1,6 +1,15 @@
+- name: Add keys
+  apt_key:
+    url: https://syncthing.net/release-key.txt
+    state: present
+
 - name: Add ppas
   apt_repository:
-    repo: ppa:teejee2008/timeshift
+    repo: 
+      - ppa:teejee2008/timeshift
+      - deb https://apt.syncthing.net/ syncthing candidate
+    state: present
+
 
 - name: Install packages
   apt: 
@@ -10,4 +19,5 @@
       - curl
       - xclip
       - timeshift
+      - syncthing
     update_cache: yes
