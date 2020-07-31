@@ -5,14 +5,12 @@
 
 - name: Add timeshift ppa
   apt_repository:
-    repo: 
-      - ppa:teejee2008/timeshift
+    repo: ppa:teejee2008/timeshift
 
 
 - name: Add syncthing source
   apt_repository:
-    repo:
-      - deb https://apt.syncthing.net/ syncthing candidate
+    repo: deb https://apt.syncthing.net/ syncthing candidate
     state: present
 
 
