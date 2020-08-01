@@ -41,6 +41,9 @@
   apt:
     deb: "{{ json_response.json.assets.3.browser_download_url }}"
 
+- name: Install Visual Studio Code
+  apt:
+    deb: https://go.microsoft.com/fwlink/?LinkID=760868
 
 - name: Clone emacs doom dev
   git:
