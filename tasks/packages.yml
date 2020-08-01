@@ -31,4 +31,4 @@
 
 - name: Install keepass deb package from github
   apt:
-    deb: "{{ json_response.3.browser_download_url }}"
+    deb: "{{ json_response.assets.3.browser_download_url }}"
