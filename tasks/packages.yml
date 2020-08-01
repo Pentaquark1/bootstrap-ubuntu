@@ -1,4 +1,4 @@
-- name: Add keys
+- name: Add syncthing key
   apt_key:
     url: https://syncthing.net/release-key.txt
     state: present
@@ -7,12 +7,10 @@
   apt_repository:
     repo: ppa:teejee2008/timeshift
 
-
 - name: Add syncthing source
   apt_repository:
     repo: deb https://apt.syncthing.net/ syncthing candidate
     state: present
-
 
 - name: Install packages
   apt: 
@@ -24,3 +22,13 @@
       - timeshift
       - syncthing
     update_cache: yes
+
+- name: Grab keepass deb package from github
+  uri:
+    url: https://api.github.com/repos/keeweb/keeweb/releases/latest
+    return_content: true
+    register: json_response
+
+- name: Install keepass deb package from github
+  apt:
+    deb: "{{ json_response.3.browser_download_url }}"
