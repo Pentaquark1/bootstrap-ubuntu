@@ -28,6 +28,7 @@
       - vlc
       - rofi
       - openssh-server
+      - tilix
     update_cache: yes
 
 - name: Grab keepass deb package from github
