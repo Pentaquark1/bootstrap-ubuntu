@@ -39,6 +39,9 @@
 - name: Clone emacs doom dev
   git:
     repo: 'https://github.com/hlissner/doom-emacs.git'
-    dest: /home/jan/.emacs.d
+    dest: ~/.emacs.d
     depth: 1
     version: develop
+
+- name: Install Doom
+  shell: /home/jan/.emacs.d/bin/doom install
