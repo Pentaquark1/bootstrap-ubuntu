@@ -21,6 +21,8 @@
       - xclip
       - timeshift
       - syncthing
+      - emacs
+      - ripgrep
     update_cache: yes
 
 - name: Grab keepass deb package from github
