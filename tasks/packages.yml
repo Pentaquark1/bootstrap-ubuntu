@@ -27,6 +27,7 @@
       - p7zip
       - vlc
       - rofi
+      - openssh-server
     update_cache: yes
 
 - name: Grab keepass deb package from github
