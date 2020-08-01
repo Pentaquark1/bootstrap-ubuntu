@@ -23,6 +23,10 @@
       - syncthing
       - emacs
       - ripgrep
+      - ledger
+      - p7zip
+      - vlc
+      - rofi
     update_cache: yes
 
 - name: Grab keepass deb package from github
