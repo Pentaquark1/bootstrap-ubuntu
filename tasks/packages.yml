@@ -42,6 +42,6 @@
     dest: ~/.emacs.d
     depth: 1
     version: develop
+  become: yes
+  become_user: jan
 
-- name: Install Doom
-  shell: /home/jan/.emacs.d/bin/doom install
