@@ -1,0 +1,13 @@
+---
+
+# Install: ansible-galaxy install nickjj.docker
+# Usage: ansible-playbook --connection=local --inventory 127.0.0.1, docker.yml
+# Note: Restart required for docker group role to take effect
+
+- name: Install docker
+  hosts: "all"
+  become: true
+
+  roles:
+    - role: "nickjj.docker"
+      tags: ["docker"]
