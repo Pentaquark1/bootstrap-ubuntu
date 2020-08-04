@@ -30,6 +30,7 @@
       - openssh-server
       - tilix
       - restic
+      - xdotool
     update_cache: yes
 
 - name: Grab keepass deb package from github
@@ -55,3 +56,6 @@
   become: yes
   become_user: jan
 
+- name: Install pip packages
+  pip:
+    name: youtube-dl

@@ -1,0 +1,17 @@
+# Usage: ansible-playbook -i "localhost," -c local -K zsh.yml
+
+- hosts: all
+  roles:
+    - role: gantsign.oh-my-zsh
+      users:
+        - username: jan
+          oh_my_zsh:
+            theme: minimal
+            plugins:
+              - git
+              - man
+              - ansible
+              - common-aliases
+              - docker
+              - docker-compose
+              - python
