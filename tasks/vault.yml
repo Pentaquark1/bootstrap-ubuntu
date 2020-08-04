@@ -1,0 +1,14 @@
+- name: Add vault key
+  apt_key:
+    url: https://apt.releases.hashicorp.com/gpg
+    state: present
+
+- name: Add vault source
+  apt_repository:
+    repo: deb [arch=amd64] https://apt.releases.hashicorp.com focal main
+    state: present
+
+- name: Install vault
+  apt:
+    name: vault
+    update_cache: yes
