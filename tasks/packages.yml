@@ -33,6 +33,7 @@
       - xdotool
       - awesome
       - luarocks
+      - gobject-introspection
     update_cache: yes
 
 - name: Grab keepass deb package from github
