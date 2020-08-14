@@ -73,5 +73,5 @@
 
 - name: Unpack and deploy restic
     unarchive:
-    src: "{{ restic_json_response.assets.8.browser_download_url }}"
-    dest: /usr/bin/
+      src: "{{ restic_json_response.assets.8.browser_download_url }}"
+      dest: /usr/bin/
