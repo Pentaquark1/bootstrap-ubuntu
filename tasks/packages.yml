@@ -72,6 +72,6 @@
   register: restic_json_response
 
 - name: Unpack and deploy restic
-    unarchive:
-      src: "{{ restic_json_response.assets.8.browser_download_url }}"
-      dest: /usr/bin/
+  unarchive:
+    src: "{{ restic_json_response.assets.8.browser_download_url }}"
+    dest: /usr/bin/
