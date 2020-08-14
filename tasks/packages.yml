@@ -67,7 +67,7 @@
 
 - name: Download restic from github
   uri:
-    url: https://api.github.com/repos/keeweb/keeweb/releases/latest
+    url: https://api.github.com/repos/restic/restic/releases/latest
     return_content: true
   register: restic_json_response
 
