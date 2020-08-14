@@ -29,7 +29,7 @@
       - rofi
       - openssh-server
       - tilix
-      - restic
+      # - restic
       - xdotool
       - awesome
       - luarocks
@@ -63,3 +63,15 @@
 - name: Install pip packages
   pip:
     name: youtube-dl
+
+
+- name: Download restic from github
+  uri:
+    url: https://api.github.com/repos/keeweb/keeweb/releases/latest
+    return_content: true
+  register: restic_json_response
+
+- name: Unpack and deploy restic
+    unarchive:
+    src: "{{ restic_json_response.assets.8.browser_download_url }}"
+    dest: /usr/bin/
